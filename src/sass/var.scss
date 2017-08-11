@@ -1,0 +1,19 @@
+/*建立一個clearfix的mixin*/
+@mixin clearfix {
+  &:after, &:before {
+    content: "";
+    display: table;
+  }
+  &:after{
+    clear:both;
+  }
+  *zoom:1;
+}
+
+@mixin boxsizing {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+
+$hrefColor: #1279bf;

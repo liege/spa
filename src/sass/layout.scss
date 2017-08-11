@@ -1,0 +1,61 @@
+@import 'var.scss';
+// 浮动布局
+.layout-flr{
+	float: right;
+}
+.layout-fll{
+	float: left;
+}
+// 透明度
+@mixin opacity($opacity:50) {
+  opacity: $opacity / 100;
+  filter: alpha(opacity=$opacity);
+}
+
+.opacity{
+  @include opacity(50); //参数使用默认值
+}
+.opacity-80{
+  @include opacity(80); //传递参数
+}
+
+// 上内边距
+@mixin p-t($num:10px){
+	padding-top: $num;
+}
+.p-t-20{
+	@include p-t(20px);
+}
+.p-t-10{
+	@include p-t(10px);
+}
+// 右内边距
+@mixin p-r($num:10px){
+	padding-right: $num;
+}
+.p-r-20{
+	@include p-r(20px);
+}
+.p-r-10{
+	@include p-r(10px);
+}
+// 右外边距
+@mixin m-r($num:10px){
+	margin-right: $num;
+}
+.m-r-20{
+	@include m-r(20px);
+}
+.m-r-10{
+	@include m-r(10px);
+}
+// 右外边距
+@mixin m-b($num:10px){
+	margin-bottom: $num;
+}
+.m-b-10{
+	@include m-b(10px);
+}
+.m-b-20{
+	@include m-b(10px);
+}
