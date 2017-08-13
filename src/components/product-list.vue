@@ -4,7 +4,7 @@
             <img src="http://placehold.it/750x290" alt="">
         </div>
         <ul class="product-list">
-            <li>
+            <li v-link="{ name: 'product-details', params: { deviceId: 123, dataId:456 }}">
                 <a href="javascript:;"><img src="http://placehold.it/750x290" alt=""></a>
                 <div class="info">
                     <p class="title">马来西亚进口 马马马马马马马马马 马马马马马马马马马</p>
@@ -12,7 +12,7 @@
                 </div>
                 <div class="add"><span class="icon icon-addcart"></span></div>
             </li>            
-            <li>
+            <li v-link="{ name: 'product-details', params: { deviceId: 123, dataId:456 }}">
                 <a href="javascript:;"><img src="http://placehold.it/750x290" alt=""></a>
                 <div class="info">
                     <p class="title">马来西亚进口 马马马马马马马马马 马马马马马马马马马</p>

@@ -16,14 +16,26 @@ router.map({
         name: 'product-list',
         component: view('product-list')
     },
-    // '/app/manager': {
-    //     name: '应用管理',
-    //     component: view('app-manager')
-    // },
-    // '/app/manager/update': {
-    //     name: '应用管理',
-    //     component: view('app-manager-update')
-    // }
+    '/product/details/:deviceId/:dataId': {
+        name: 'product-details',
+        component: view('product-details')
+    },
+    '/cart': {
+        name: 'cart',
+        component: view('cart')
+    },
+    '/order': {
+        name: 'order',
+        component: view('order')
+    },
+    '/address/edit': {
+        name: 'edit-address',
+        component: view('edit-address')
+    },
+    '/address/manage': {
+        name: 'manage-address',
+        component: view('manage-address')
+    }
 
 });
 
