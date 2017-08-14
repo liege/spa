@@ -28,9 +28,9 @@ $fontF:"Microsoft YaHei";
 
 .icon {
     display: inline-block;
-    width: px2rem(30);
-    height: px2rem(30);
-    margin-bottom: -3px;
+    width: px2rem(40);
+    height: px2rem(40);
+    margin-bottom: px2rem(-4);
 
 }
 
@@ -134,7 +134,7 @@ body{
         color: #ff3034;
         li {
             width: px2rem(100);
-            margin: px2rem(20) 0;
+            margin: px2rem(18) 0;
             text-align: center;
         }
 
@@ -152,6 +152,7 @@ body{
         li {
             width: px2rem(100);
             margin: px2rem(20) 0;
+            line-height: px2rem(60);
             img {
                 width:100%;
             }
@@ -161,11 +162,55 @@ body{
     .hot {
         width: px2rem(750);
         padding-bottom: px2rem(100);
+
         li {
             margin-bottom: px2rem(20);
             position: relative;
-            img {
+            width: px2rem(750);
+            display: flex;
+            flex-wrap:nowrap;
+            .info {
+                 flex-grow:2;
+                 padding: px2rem(60) px2rem(80) 0 px2rem(40);
+            }
+            .title {
+                font-size: px2rem(28);
+                font-weight: 800;
                 width: 100%;
+                border-bottom: 1px solid #000;
+            }
+            .details,
+            .price {
+                font-size: px2rem(18);
+                line-height: px2rem(30);
+            }
+            .price span {
+                text-decoration: line-through;
+            }
+            .promPrice {
+                font-size: px2rem(44);
+                color: #fc0101;
+                font-weight: 800;
+                padding-top: px2rem(26);
+                text-indent: px2rem(-6);
+            }
+            img {
+                width: px2rem(220);
+                width: px2rem(200);
+                padding: px2rem(60) px2rem(40);
+            }
+
+
+            $bgcolorlist : (
+                1: #e7ffdf,
+                2: #fffae0,
+                3: #e7e4e3,
+                4: #fce6e5);
+
+            @each $i, $color in $bgcolorlist {
+                &:nth-child(4n+#{$i}) {
+                    background-color: $color;
+                }
             }
         }
         .icon-addcart {
@@ -175,6 +220,18 @@ body{
             bottom: px2rem(47);
             width: px2rem(46);
             height: px2rem(46);
+        }
+        .type {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #ea6d78;
+            font-size: px2rem(22);
+            color: #fff;
+            width: px2rem(50);
+            height: px2rem(50);
+            line-height: px2rem(50);
+            text-align: center;
         }
     }
 }

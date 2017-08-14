@@ -1,5 +1,6 @@
 <template>
     <div class="container index-container">
+        <!-- 焦点图 -->
         <div id="focus" class="focus">
             <div class="hd">
                 <ul></ul>
@@ -18,6 +19,7 @@
                 </ul>
             </div>
         </div>
+        <!-- 分类导航 -->
         <ul class="sort">
             <li v-link="{ name: 'product-list', params: { deviceId: 123, dataId:456 }}">
                 <a href="javascript:;"><img src="http://placehold.it/100x100" alt=""></a>
@@ -36,16 +38,21 @@
                 <div class="title">知言学习</div>
             </li>
         </ul>
+        <!-- 产品列表 -->
         <ul class="hot">
-            <li>
-                <a href="javascript:;"><img src="http://placehold.it/750x290" alt=""></a>
+            <li v-for="(index,item) in hotList">
+                <a href="javascript:;"><img :src="item.picUrl" alt=""></a>
+                <div class="info">
+                    <p class="title" v-text="item.title"></p>
+                    <p class="details" v-text="item.info"></p>
+                    <p class="price">市场价<span>￥{{item.price}}</span></p>
+                    <p class="promPrice">￥{{item.promPrice}}</p>
+                </div>
                 <div class="add"><span class="icon icon-addcart"></span></div>
+                <div class="type">促</div>
             </li>            
-            <li>
-                <a href="javascript:;"><img src="http://placehold.it/750x290" alt=""></a>
-                <div class="add"><span class="icon icon-addcart"></span></div>
-            </li>
         </ul>
+        <!-- 底部菜单 -->
         <ul class="menu">
             <li>
                 <a href="javascript:;"><span class="icon icon-index"></span></a>
@@ -71,8 +78,85 @@
 <script type="text/javascript">
 import '../js/lib/TouchSlide.1.1.js';
 
+var hotList = [
+    {
+        picUrl: 'http://placehold.it/220x200',
+        title: '产品大标题',
+        info: '产品介绍',
+        price: '69',
+        promPrice: '49'
+    },
+    {
+        picUrl: 'http://placehold.it/220x200',
+        title: '产品大标题',
+        info: '产品介绍',
+        price: '69',
+        promPrice: '49'
+    },
+    {
+        picUrl: 'http://placehold.it/220x200',
+        title: '产品大标题',
+        info: '产品介绍',
+        price: '69',
+        promPrice: '49'
+    },
+    {
+        picUrl: 'http://placehold.it/220x200',
+        title: '产品大标题',
+        info: '产品介绍',
+        price: '69',
+        promPrice: '49'
+    },
+    {
+        picUrl: 'http://placehold.it/220x200',
+        title: '产品大标题',
+        info: '产品介绍',
+        price: '69',
+        promPrice: '49'
+    },
+    {
+        picUrl: 'http://placehold.it/220x200',
+        title: '产品大标题',
+        info: '产品介绍',
+        price: '69',
+        promPrice: '49'
+    },
+    {
+        picUrl: 'http://placehold.it/220x200',
+        title: '产品大标题',
+        info: '产品介绍',
+        price: '69',
+        promPrice: '49'
+    },
+    {
+        picUrl: 'http://placehold.it/220x200',
+        title: '产品大标题',
+        info: '产品介绍',
+        price: '69',
+        promPrice: '49'
+    },
+    {
+        picUrl: 'http://placehold.it/220x200',
+        title: '产品大标题',
+        info: '产品介绍',
+        price: '69',
+        promPrice: '49'
+    },
+    {
+        picUrl: 'http://placehold.it/220x200',
+        title: '产品大标题',
+        info: '产品介绍',
+        price: '69',
+        promPrice: '49'
+    }
+]
 
 module.exports = {
+    data: function () {
+        return {
+            hotList: hotList
+        }
+    },
     init: function(){
         console.log('init');
     },

@@ -48,7 +48,7 @@
                 <p>购物车</p></a>
             </div>
             <div class="add_cart" @click="add_cart">加入购物车</div>
-            <div class="purchase">立即购买</div>
+            <div class="purchase" v-link="{ name: 'order', params: { deviceId: 123, dataId:456 }}">立即购买</div>
         </div>
         <div class="Scale_modal" @click="close" @touchmove.prevent :class={modal_show:modal_show,bg:!isactive}>
             <div class="dv animated" @click="noclose($event)" :class="{fadeInDownBig:isactive,fadeInUpBig:!isactive}">
