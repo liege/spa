@@ -35,6 +35,14 @@ router.map({
     '/address/manage': {
         name: 'manage-address',
         component: view('manage-address')
+    },
+    '/order/center': {
+        name: 'order-center',
+        component: view('order-center')
+    },
+    '/order/list': {
+        name: 'order-list',
+        component: view('order-list')
     }
 
 });

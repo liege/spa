@@ -1,36 +1,38 @@
 <template>
-    <div class="container order-container">
-        <div class="con" id="wrapper">
-            <ul>
-                <li>
-                    <p>王双双   138****2480</p>
-                    <p>上海市杨浦区五角场街道武东路198号 财大科技园12层</p>
-                </li>
-                <div class="title">订单信息</div>
-                <li v-for="(item, index) in shopList">
-                    <div class="con-img"><img :src="item.img"></div>
-                    <div class="con-detail">
-                        <p>{{item.detail}}</p>
-                        <p>颜色：白色；尺寸：XXL</p>
-                        <p>{{item.num*item.price | formatMoney}}</p>
-                        <p>× {{item.num}}</p>
-                    </div>
+    <div class="container order-center-container">
+        <header>
+            <div class="avater"><img src="http://placehold.it/160x160" alt=""></div>
+        </header>
+        <div class="order">
+            <div class="title">我的订单<span class="more">查看全部订单</span><i class="entrance_icon"></i></div>
+            <ul class="order-status">
+                <li v-link="{ name: 'product-list', params: { deviceId: 123, dataId:456 }}">
+                    <a href="javascript:;"><img src="../img/icon-dfk.png" alt=""></a>
+                    <div class="title">待付款</div>
                 </li>
                 <li>
-                    <div>
-                        <p>商品合计</p>
-                        <p>运费</p>
-                    </div>
-                    <div>
-                        <p>¥256.00</p>
-                        <p>¥128.00</p>
-                    </div>      
+                    <a href="javascript:;"><img src="../img/icon-dfh.png" alt=""></a>
+                    <div class="title">待发货</div>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="../img/icon-dsh.png" alt=""></a>
+                    <div class="title">待收货</div>
+                </li>
+                <li>
+                    <a href="javascript:;"><img src="../img/icon-ywc.png" alt=""></a>
+                    <div class="title">已完成</div>
                 </li>
             </ul>
         </div>
-        <footer>
-            <span>总计：{{totalMoney | formatMoney}}</span><span>确认付款</span>
-        </footer>
+        <div class="service">
+            <div class="title">客户服务</div>
+            <div>
+                <i class="icon icon-address"></i>收货地址<i class="entrance_icon"></i>
+            </div>
+            <div>
+                <a href="tel:4007280800"><i class="icon icon-call"></i>客服咨询 <i class="entrance_icon"></i></a>
+            </div>
+        </div>
     </div>
 </template>
 
